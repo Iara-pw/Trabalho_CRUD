@@ -5,6 +5,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = 5000;
 
+app.use(cors()); // ← ESSENCIAL
+app.use(express.json());
+
 // Permitir CORS para todas as origens e métodos
 app.use(
   cors({
